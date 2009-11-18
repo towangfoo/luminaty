@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  light_used: MyString
+  src: MyString
+  is_daylight: false
+  is_artificiallight: false
+
+two:
+  title: MyString
+  description: MyText
+  light_used: MyString
+  src: MyString
+  is_daylight: false
+  is_artificiallight: false

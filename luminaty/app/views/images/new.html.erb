@@ -1,0 +1,35 @@
+<h1>New image</h1>
+
+<% form_for(@image, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :light_used %><br />
+    <%= f.text_field :light_used %>
+  </p>
+  <p>
+    <%= f.label :src %><br />
+    <%= file_column_field 'image', 'src' %>
+  </p>
+  <p>
+    <%= f.label :is_daylight %><br />
+    <%= f.check_box :is_daylight %>
+  </p>
+  <p>
+    <%= f.label :is_artificiallight %><br />
+    <%= f.check_box :is_artificiallight %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', images_path %>

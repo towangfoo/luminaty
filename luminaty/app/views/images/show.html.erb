@@ -1,0 +1,37 @@
+<p>
+  <b>Title:</b>
+  <%=h @image.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @image.description %>
+</p>
+
+<p>
+  <b>Light used:</b>
+  <%=h @image.light_used %>
+</p>
+
+<p>
+  <b>Src:</b>
+  <%= image_tag url_for_file_column(@image, "src", "standard") %>
+</p>
+
+<p>
+  <%= lightbox_link_to "Show in Lightbox", url_for_file_column(@image, "src"), :title => @image.title, :rel => "lightbox[this]" %> 
+</p>
+
+<p>
+  <b>Is daylight:</b>
+  <%=h @image.is_daylight %>
+</p>
+
+<p>
+  <b>Is artificiallight:</b>
+  <%=h @image.is_artificiallight %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

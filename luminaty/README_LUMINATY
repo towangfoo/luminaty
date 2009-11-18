@@ -1,0 +1,15 @@
+benötigte Libs / Gems:
+----------------------------------
+    - RMagick (see http://rmagick.rubyforge.org/)
+        - unter linux mit paketmanager:
+            1. sudo apt-get install imagemagick libmagick9-dev
+            2. sudo gem install rmagick
+        - unter OSX mit MacPorts:
+            1. sudo port install tiff -macosx imagemagick +q8 +gs +wmf
+            2. sudo gem install rmagick
+
+    - FileColumn (see http://www.kanthak.net/opensource/file_column/)
+        - ist im git enthalten (vendor/plugins/file_column)
+        - wenn neu installiert wird, muss in der "file_column.rb" Zeile 619 wie folgt ersetzt werden >> ActiveSupport::Inflector.underscore(self.name).to_s,
+    - Lightbox plugin (see http://github.com/Lipsiasoft/lightbox)
+        - ist auch bereits im git enthalten

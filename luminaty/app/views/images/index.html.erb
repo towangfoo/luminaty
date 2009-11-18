@@ -1,0 +1,30 @@
+<h1>Listing images</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Light used</th>
+    <th>Src</th>
+    <th>Is daylight</th>
+    <th>Is artificiallight</th>
+  </tr>
+
+<% @images.each do |image| %>
+  <tr>
+    <td><%=h image.title %></td>
+    <td><%=h image.description %></td>
+    <td><%=h image.light_used %></td>
+    <td><%= image_tag url_for_file_column(image, "src", "thumb") %></td>
+    <td><%=h image.is_daylight %></td>
+    <td><%=h image.is_artificiallight %></td>
+    <td><%= link_to 'Show', image %></td>
+    <td><%= link_to 'Edit', edit_image_path(image) %></td>
+    <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New image', new_image_path %>
