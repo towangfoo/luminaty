@@ -1,3 +1,7 @@
+nötige Anpassungen für eine lokale Kopie:
+------------------------------------------------------------------
+    - kopiere "config/database.yml.default" nach "config/database.yml" und ändere die Einstellungen entsprechend. "config/database.yml" ist in der .gitignore, bzw. sollte dort sein, damit jeder sein eigene Datenbankkonfiguration hat.
+
 benötigte Libs / Gems:
 ----------------------------------
     - RMagick (see http://rmagick.rubyforge.org/)
@@ -11,5 +15,6 @@ benötigte Libs / Gems:
     - FileColumn (see http://www.kanthak.net/opensource/file_column/)
         - ist im git enthalten (vendor/plugins/file_column)
         - wenn neu installiert wird, muss in der "file_column.rb" Zeile 619 wie folgt ersetzt werden >> ActiveSupport::Inflector.underscore(self.name).to_s,
+
     - Lightbox plugin (see http://github.com/Lipsiasoft/lightbox)
         - ist auch bereits im git enthalten
